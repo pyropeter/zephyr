@@ -1,0 +1,48 @@
+/dts-v1/;
+
+#include <nxp/nxp_kw41z.dtsi>
+
+/ {
+	model = "Beduino Pro Mini";
+	compatible = "nxp,kw41z", "nxp,mkw41z4";
+
+	aliases {
+		adc-0 = &adc0;
+		lpuart-0 = &lpuart0;
+		pinmux-a = &pinmux_a;
+		pinmux-b = &pinmux_b;
+		pinmux-c = &pinmux_c;
+		gpio-a = &gpioa;
+		gpio-b = &gpiob;
+		gpio-c = &gpioc;
+		i2c-0 = &i2c0;
+		i2c-1 = &i2c1;
+		led0 = &red_led;
+		led1 = &green_led;
+		rtc-0 = &rtc0;
+	};
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,console = &lpuart0;
+		zephyr,shell-uart = &lpuart0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		red_led: led_0 {
+			gpios = <&gpiob 0 0>;
+			label = "User LD1";
+		};
+		green_led: led_1 {
+			gpios = <&gpioc 5 0>;
+			label = "User LD2";
+		};
+	};
+};
+
+&lpuart0 {
+	status = "ok";
+	current-speed = <115200>;
+};

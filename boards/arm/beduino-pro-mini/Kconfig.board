@@ -1,0 +1,11 @@
+# Kconfig - Beduino Pro Mini board
+#
+# Copyright (c) 2019, Tristan Bruns
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config BOARD_BEDUINO_PRO_MINI
+	bool "Beduino Pro Mini"
+	depends on SOC_SERIES_KINETIS_KWX
+	select SOC_PART_NUMBER_MKW41Z256VHT4
