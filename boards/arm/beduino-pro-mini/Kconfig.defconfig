@@ -38,10 +38,10 @@ config GPIO_MCUX_PORTA
 	default y
 
 config GPIO_MCUX_PORTB
-	default n
+	default y
 
 config GPIO_MCUX_PORTC
-	default y
+	default n
 
 endif # GPIO_MCUX
 
