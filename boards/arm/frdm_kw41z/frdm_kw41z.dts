@@ -1,5 +1,12 @@
 /dts-v1/;
 
+#include <mem.h>
+
+/* KW41Z512 */
+#define DT_FLASH_SIZE DT_SIZE_K(512)
+#define DT_SRAM_SIZE  DT_SIZE_K(128)
+#define DT_SRAM_ADDR  0x1FFF8000
+
 #include <nxp/nxp_kw41z.dtsi>
 
 / {
