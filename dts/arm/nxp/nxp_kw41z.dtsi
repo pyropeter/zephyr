@@ -15,6 +15,14 @@
 		};
 	};
 
+	/* sram0 covers both SRAM_L and SRAM_H and treats them
+	 * as a single, contiguos memory region. This is not
+	 * technically correct, but we should get away with it,
+	 * as this is an ARMv6-M core, which never allows
+	 * unaligned memory access. But please keep this in mind
+	 * when copying ideas from here, as this will not work
+	 * in general. (See issue #2984 and PR #12081)
+	 */
 	sram0: memory@DT_SRAM_ADDR {
 		device_type = "memory";
 		compatible = "mmio-sram";
