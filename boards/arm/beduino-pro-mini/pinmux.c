@@ -26,7 +26,7 @@ static int beduino_pro_mini_pinmux_init(struct device *dev)
 #endif
 
 	/* Red and green LEDs. */
-	pinmux_pin_set(portb,  0, PORT_PCR_MUX(kPORT_MuxAsGpio));
+	pinmux_pin_set(portc,  4, PORT_PCR_MUX(kPORT_MuxAsGpio));
 	pinmux_pin_set(portc,  5, PORT_PCR_MUX(kPORT_MuxAsGpio));
 
 #if CONFIG_I2C_1

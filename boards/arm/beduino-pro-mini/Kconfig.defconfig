@@ -25,7 +25,7 @@ config PINMUX_MCUX_PORTA
 	default y
 
 config PINMUX_MCUX_PORTB
-	default y
+	default n
 
 config PINMUX_MCUX_PORTC
 	default y
@@ -38,10 +38,10 @@ config GPIO_MCUX_PORTA
 	default y
 
 config GPIO_MCUX_PORTB
-	default y
+	default n
 
 config GPIO_MCUX_PORTC
-	default n
+	default y
 
 endif # GPIO_MCUX
 

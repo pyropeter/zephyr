@@ -32,7 +32,7 @@
 	leds {
 		compatible = "gpio-leds";
 		red_led: led_0 {
-			gpios = <&gpiob 0 0>;
+			gpios = <&gpioc 4 0>;
 			label = "User LD1";
 		};
 		green_led: led_1 {
